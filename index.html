@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="javascript/index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="icon" href="image/logo/logoOnly.png" type="image/icon type">
+
+    <title>IMSN | Dashboard</title>
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+    <nav class="bg-white dark:bg-gray-900 border-gray-200 sticky top-0 z-50 shadow-md">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center">
+                <img src="./image/logo/LogoIMSN_no_bg.png" class="h-20 mr-3 rounded-full" alt="IMSN Logo" />
+            </a>
+
+            <div class="flex md:order-2 space-x-3">
+                <button onclick="toggleDarkMode()"
+                    class="text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2">
+                    🌙
+                </button>
+
+                <a href="login.html"
+                    class="text-white bg-red-700 hover:bg-red-900 font-medium rounded-xl text-sm px-6 py-2.5">Login</a>
+
+                <button onclick="toggleMenu()"
+                    class="md:hidden inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col md:flex-row md:space-x-8 bg-white dark:bg-gray-900 p-4 md:p-0 rounded-lg shadow-md md:shadow-none">
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200 dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Profile</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="navbar/profile/ourJourney.html"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Our
+                                    Journey</a></li>
+                            <li><a href="navbar/profile/strukturOrganisasi.html"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Struktur
+                                    Organisasi</a></li>
+                            <li><a href="navbar/profile/visidanMisi.html"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Visi
+                                    dan Misi</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200  dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Programs</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800  dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Sharing
+                                    Session</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800  dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Workshop</a>
+                            </li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800  dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Siltam
+                                    dan Kopdar</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200  dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Team</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">2023</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200  dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Portfolio</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Sharing
+                                    Session</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Workshop</a>
+                            </li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Siltam
+                                    dan Kopdar</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200  dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Partnership</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Link
+                                    1</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Link
+                                    2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 font-bold text-gray-900 hover:text-gray-200  dark:text-white rounded hover:bg-red-600 dark:hover:bg-red-600">Calendar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="flex flex-col md:flex-row items-center justify-center w-full mt-12">
+            <video src="image/video/companyprofile.mp4" autoplay controls
+                class="border-lg border-gray-200 rounded-4xl mb-4 md:mb-0 md:mr-8"></video>
+            <div
+                class="flex flex-col items-center md:items-center justify-center md:justify-center text-center md:text-center">
+                <h2 class="text-3xl font-bold dark:text-white text-blue-900">Indonesia Student <span
+                        class="text-red-500">Mining Network</span></h2>
+                <div class="mt-4 flex flex-col items-start justify-start">
+                    <p>Menghubungkan mahasiswa pertambangan di seluruh Indonesia</p>
+                </div>
+                <button
+                    class="mt-6 text-white bg-red-700 hover:bg-red-900 font-bold rounded-xl text-sm px-6 py-2.5">Join
+                    IMSN now!</button>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white dark:bg-gray-900 dark:text-white dark:bg-gray-900 dark:text-white p-4">
+        <div
+            class="flex flex-row items-center justify-center m-12 text-center md:text-center md:justify-center dark:text-white flex-wrap gap-4">
+            <div
+                class="p-10 flex flex-row items-center justify-center box dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-none dark:border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 dark:hover:border-gray-600 dark:hover:text-white dark:hover:bg-gray-800  box dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-none dark:border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 dark:hover:border-gray-600 dark:hover:text-white dark:hover:bg-gray-800">
+                <i
+                    class="fas fa-graduation-cap text-gray-500 text-5xl mr-4 dark:text-red-500 dark:hover:text-red-500"></i>
+                <div class="">
+                    <h3
+                        class="text-3xl font-bold dark:text-white text-blue-900 dark:hover:text-red-500 dark:hover:text-red-500">
+                        100 +</h3>
+                    <p class="dark:text-white text-blue-900 dark:hover:text-red-500 dark:hover:text-red-500">Anggota
+                        IMSN</p>
+                </div>
+            </div>
+            <div
+                class="p-10 flex flex-row items-center justify-center box dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-none dark:border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 dark:hover:border-gray-600 dark:hover:text-white dark:hover:bg-gray-800  box dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-none dark:border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 dark:hover:border-gray-600 dark:hover:text-white dark:hover:bg-gray-800">
+                <i
+                    class="fas fa-user-graduate text-gray-500 text-5xl mr-4 dark:text-red-500 dark:hover:text-red-500"></i>
+                <div class="content">
+                    <h3
+                        class="text-3xl font-bold dark:text-white text-blue-900 dark:hover:text-red-500 dark:hover:text-red-500">
+                        1000 +</h3>
+                    <p class="dark:text-white text-blue-900 dark:hover:text-red-500 dark:hover:text-red-500">Partisipan
+                    </p>
+                </div>
+            </div>
+            <div
+                class="p-10 flex flex-row items-center justify-center box dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-none dark:border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 dark:hover:border-gray-600 dark:hover:text-white dark:hover:bg-gray-800  box dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-none dark:border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 dark:hover:border-gray-600 dark:hover:text-white dark:hover:bg-gray-800">
+                <i
+                    class="fas fa-chalkboard-user text-gray-500 text-5xl mr-4 dark:text-red-500 dark:hover:text-red-500"></i>
+                <div class="content">
+                    <h3
+                        class="text-3xl font-bold dark:text-white text-blue-900 dark:hover:text-red-500 dark:hover:text-red-500">
+                        10 +</h3>
+                    <p class="dark:text-white text-blue-900 dark:hover:text-red-500 dark:hover:text-red-500">Partnership
+                    </p>
+                </div>
+            </div>
+            <div
+                class="p-10 flex flex-row items-center justify-center box dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-none dark:border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 dark:hover:border-gray-600 dark:hover:text-white dark:hover:bg-gray-800  box dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-none dark:border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 dark:hover:border-gray-600 dark:hover:text-white dark:hover:bg-gray-800">
+                <i class="fas fa-face-smile text-gray-500 text-5xl mr-4 dark:text-red-500 dark:hover:text-red-500"></i>
+                <div class="content">
+                    <h3
+                        class="text-3xl font-bold dark:text-white text-blue-900 dark:hover:text-red-500 dark:hover:text-red-500">
+                        100%</h3>
+                    <p class="dark:text-white text-blue-900 dark:hover:text-red-500 dark:hover:text-red-500">
+                        SatisFaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ <section class="flex flex-col md:flex-row items-center justify-center m-24">
+        <div class="flex flex-col items-center md:items-center justify-center md:items-start text-center md:text-left">
+            <h2 class="text-3xl font-bold text-gray-600 dark:text-white">Tentang Kami</h2>
+            <div class="mt-4 flex flex-col items-center justify-center">
+                <p class="text-lg text-gray-600 dark:text-white"><strong>Visi:</strong> Menghubungkan mahasiswa pertambangan di seluruh Indonesia.</p>
+                <p class="text-lg text-gray-600 dark:text-white"><strong>Misi:</strong> Menyediakan peluang pendidikan dan kolaborasi.</p>
+                <p class="text-lg text-gray-600 dark:text-white"><strong>Tujuan:</strong> Memajukan industri pertambangan.</p>
+            </div>
+        </div>
+        <img src="image/imsnfootage/miners.png" alt="Miners" class="w-full md:w-1/2 mt-12 rounded-3xl md:ml-8">
+    </section>
+
+
+    <section>
+        <div class="flex flex-row items-center md:items-center justify-center md:justify-center m-24">
+            <div
+                class="flex flex-col items-center md:items-center justify-center md:justify-center text-center md:text-center">
+                <h2 class="text-3xl font-bold text-gray-600 dark:text-white">Our Programs</h2>
+                <div class="mt-4 flex flex-row gap-4 items-center justify-center">
+                    <div class="max-w-xs mt-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <img class="rounded-t-lg w-full h-68 md:h-68" src="image/imsnfootage/workshop.png" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                                technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-xs text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            More info
+                        </a>
+                    </div>
+                    </div>
+                    <div class="max-w-xs mt-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <img class="rounded-t-lg w-full h-68 md:h-68" src="image/imsnfootage/workshop.png" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                                technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-xs text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            More info
+                        </a>
+                    </div>
+                    </div>
+                    <div class="max-w-xs mt-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <img class="rounded-t-lg w-full h-68 md:h-68" src="image/imsnfootage/workshop.png" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                                technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-xs text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            More info
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <section>
+        
+
+        <footer class="bg-white dark:bg-gray-900">
+            <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <a href="index.html" class="flex items-center">
+                            <img src="image/logo/LogoIMSN_no_bg.png" class="h-38 w-48 me-3" alt="IMSN Logo" />
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Bantuan</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li><a href="#" class="hover:underline">About Us</a></li>
+                                <li><a href="#" class="hover:underline">Term and Conditions</a></li>
+                                <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                                <li><a href="#" class="hover:underline">Contact</a></li>
+                            </ul>
+                        </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Informasi</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Career</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Live Event</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">E - Course</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-gray-200 dark:border-gray-700 lg:my-8" />
+            <div class="flex flex-col sm:flex-row justify-between items-center">
+                <span class="text-sm text-gray-500 dark:text-gray-400">© 2024 Indonesia Mining Student Network™. All Rights Reserved.</span>
+                <div class="flex mt-4 sm:mt-0 space-x-5">
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i class="fab fa-spotify"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </section>
+</body>
+
+</html>

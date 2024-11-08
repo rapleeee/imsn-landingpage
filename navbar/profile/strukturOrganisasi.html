@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../../../../javascript/index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="icon" href="./../../image/logo/logoOnly.png" type="image/icon type">
+
+    <title>IMSN | Struktur Organisasi</title>
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+    <nav class="bg-white dark:bg-gray-900 border-gray-200 sticky top-0 z-50 shadow-md">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="./../../index.html" class="flex items-center">
+                <img src="../../image/logo/LogoIMSN_no_bg.png" class="h-20 mr-3 rounded-full" alt="IMSN Logo" />
+            </a>
+
+            <div class="flex md:order-2 space-x-3">
+                <button onclick="toggleDarkMode()"
+                    class="text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2">
+                    🌙
+                </button>
+
+                <a href="login.html"
+                    class="text-white bg-red-700 hover:bg-red-900 font-medium rounded-xl text-sm px-6 py-2.5">Login</a>
+
+                <button onclick="toggleMenu()"
+                    class="md:hidden inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col md:flex-row md:space-x-8 bg-white dark:bg-gray-900 p-4 md:p-0 rounded-lg shadow-md md:shadow-none">
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200 dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Profile</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="ourJourney.html"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Our
+                                    Journey</a></li>
+                            <li><a href="strukturOrganisasi.html"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Struktur
+                                    Organisasi</a></li>
+                            <li><a href="visidanMisi.html"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Visi
+                                    dan Misi</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200  dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Programs</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800  dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Sharing
+                                    Session</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800  dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Workshop</a>
+                            </li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800  dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Siltam
+                                    dan Kopdar</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200  dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Team</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">2023</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200  dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Portfolio</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Sharing
+                                    Session</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Workshop</a>
+                            </li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Siltam
+                                    dan Kopdar</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 text-gray-900 hover:text-gray-200  dark:text-white font-bold rounded hover:bg-red-600 dark:hover:bg-red-600">Partnership</a>
+                        <ul
+                            class="absolute left-0 hidden mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 group-hover:block">
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Link
+                                    1</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Link
+                                    2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="py-2 pl-3 pr-4 font-bold text-gray-900 hover:text-gray-200  dark:text-white rounded hover:bg-red-600 dark:hover:bg-red-600">Calendar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mx-auto text-center space-y-10 m-12">
+        <div class="p-4 bg-white rounded-lg shadow-md max-w-md mx-auto">
+            <img src="../../image/imsnfootage/strukturOrganisasi/sam.jpg" alt="Foto Ketua" class="rounded-full w-24 h-24 mx-auto mb-4">
+            <h2 class="text-2xl font-semibold text-gray-800">Founder</h2>
+            <p class="text-gray-600"> Samuel Christian Sitompul</p>
+        </div>
+
+        <!-- Divisi Kepala Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <!-- Template for each Divisi Kepala -->
+            <div class="p-6 bg-white rounded-lg shadow-md space-y-4 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white dark:text-white text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                <img src="../../image/imsnfootage/strukturOrganisasi/sam.jpg" alt="Foto Kepala Divisi 1" class="rounded-full w-20 h-20 mx-auto">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Sekretaris</h3>
+                <p class="text-gray-600 dark:text-gray-400">Oktariana Meliana Putri</p>
+            </div>
+
+            <!-- Repeat for each Divisi Kepala (2 to 5) -->
+            <div class="p-6 bg-white rounded-lg shadow-md space-y-4">
+                <img src="../../image/imsnfootage/strukturOrganisasi/sam.jpg" alt="Foto Kepala Divisi 2" class="rounded-full w-20 h-20 mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Kepala Design And Pubication</h3>
+                <p class="text-gray-600">Richar Farantino</p>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h4 class="font-medium text-gray-700">Sub Divisi Web Developer</h4>
+                    <p class="text-gray-500">M. Sanjaya Ardy Wibowo</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h4 class="font-medium text-gray-700">Sub Divisi Sosial Media Manager</h4>
+                    <p class="text-gray-500">Andrean Ariansya</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg shadow-md space-y-4">
+                <img src="../../image/imsnfootage/strukturOrganisasi/sam.jpg" alt="Foto Kepala Divisi 3" class="rounded-full w-20 h-20 mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Divisi Kepala 3</h3>
+                <p class="text-gray-600">Raihan Saputra</p>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h4 class="font-medium text-gray-700">Sub Divisi 3.1</h4>
+                    <p class="text-gray-500">Hilvi Hidayah</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h4 class="font-medium text-gray-700">Sub Divisi 3.2</h4>
+                    <p class="text-gray-500">Malik Ardian</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg shadow-md space-y-4">
+                <img src="../../image/imsnfootage/strukturOrganisasi/sam.jpg" alt="Foto Kepala Divisi 4" class="rounded-full w-20 h-20 mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Kepala Divisi Event Management</h3>
+                <p class="text-gray-600">Miftahurrizka Afrah</p>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h4 class="font-medium text-gray-700">Sub Divisi 4.1</h4>
+                    <p class="text-gray-500">Ridho Lintang Erlando</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h4 class="font-medium text-gray-700">Sub Divisi 4.2</h4>
+                    <p class="text-gray-500">Winda Marta Uli Situmeang</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg shadow-md space-y-4">
+                <img src="../../image/imsnfootage/strukturOrganisasi/sam.jpg" alt="Foto Kepala Divisi 5" class="rounded-full w-20 h-20 mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Divisi Kepala 5</h3>
+                <p class="text-gray-600">Chelsie Three Octary</p>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h4 class="font-medium text-gray-700">Sub Divisi 5.1</h4>
+                    <p class="text-gray-500">Staff 3.2.2</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
